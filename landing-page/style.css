@@ -1,0 +1,22 @@
+*, ::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 85%;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+ width: 100%;
+}
