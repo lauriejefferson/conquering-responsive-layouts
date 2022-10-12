@@ -93,12 +93,12 @@ header {
     list-style: none;
     display: flex;
     font-size: .9rem;
-    align-items: center;
+/*     align-items: center; */
 
 }
 
 .nav__list--primary {
-    margin: 0 auto;
+    margin: 0 2em;
 }
 
 .nav__item + .nav__item{
