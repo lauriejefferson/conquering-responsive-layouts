@@ -12,7 +12,8 @@ body {
 
 header {
   background-color: #2E323F;
-  padding: 1.2em;
+   padding: 1em 1.2em;
+  text-align: center;
 }
 
 .container {
@@ -22,9 +23,6 @@ header {
   padding: .25em;
 }
 
-.col {
-  margin-bottom: 2em;
-}
 
 img {
   max-width: 100%;
@@ -51,17 +49,91 @@ section {
 
 
 .logo {
+   height: 30px;
   color: #FFFFFF;
 }
 
-.nav__list {
-  padding: 0;
+.nav {
+   visibility: hidden;
+    height: 0;
+    position: absolute;
+    font-size: 1rem;
+  width: 100%;
 }
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav__list--primary {
+    margin: 0 2em;
+}
+
+.nav__item + .nav__item{
+    margin-left: 1em;
+}
+
 .nav__list--secondary .nav__item {
   margin-bottom: 0.75em;
 }
 .nav__item {
-  list-style-type: none;
+   margin-top: 0.75em;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -190,19 +262,32 @@ section {
 
 @media (min-width: 700px){
 
- .sidebar .row {
+  .row {
     display: flex;
+    justify-content: space-between;
+}
+   .nav-toggle {
+        display: none;
+    }
 
-  }
+    .nav {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: auto;
+        position: relative;
+    }
 
-  .sidebar .row .col {
-    width: 100%;
-  }
+    .nav__list {
+        display: flex;
+        margin: 0;
+    }
 
-  .sidebar .col + .col {
-    margin-left: 1.8em;
-    padding: 1.8em;
-  }
+
+  .nav__item {
+        margin: 0 0 0 1.5em;
+    }
 
   .sidebar__content {
     padding: 1.8em;
@@ -220,10 +305,11 @@ section {
     margin: 2em;
   }
 
-  .sidebar .col + .col {
+  .col + .col {
      margin: 2em;
     padding: 1.8em;
   }
+  
   .sidebar .row {
     display: flex;
     flex-direction: column;
