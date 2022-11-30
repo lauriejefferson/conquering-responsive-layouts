@@ -203,8 +203,6 @@ header {
 
 
 @media (min-width: 800px) {
-
-    
     .nav-toggle {
         display: none;
     }

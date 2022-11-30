@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Oswald:wght@700&display=swap');
 
 *, *::before, *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,32 +12,36 @@ body {
 
 header {
   background-color: #2E323F;
-   padding: 1em 1.2em;
+  padding: 1em 0;
   text-align: center;
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   max-width: 1200px;
-  padding: .25em;
+  position: relative;
 }
-
 
 img {
   max-width: 100%;
 }
 
-h1,h2 {
-  margin: 0;
+h1, h2 {
+  margin-top: 0;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   line-height: 1;
 }
 
+p {
+  font-family: 'Monserrat', sans-serif;
+}
+
+
 section {
   margin: 0 auto;
-  padding: 4em;
+  padding: 2em;
 }
 
 
@@ -49,130 +53,131 @@ section {
 
 
 .logo {
-   height: 30px;
-   color: #FFFFFF;
+  height: 30px;
+  color: #FFFFFF;
 }
 
 .nav {
-   visibility: hidden;
-   height: 0;
-   position: absolute;
-   font-size: 1rem;
-   width: 100%;
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  font-size: 1rem;
+  width: 100%;
 }
 
 .nav--visible {
-    visibility: visible;
-    height: auto;
-    position: relative;
+  visibility: visible;
+  height: auto;
+  position: relative;
 }
 
 .nav-toggle {
-    cursor: pointer;
-    border: 0;
-    width: 3em;
-    height: 3em;
-    padding: 0em;
-    border-radius: 50%;
-    background: #072A2D;
-    color: white;
-    transition: opacity 250ms ease;
-    
-    position: absolute;
-    left: 0;
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  border-radius: 50%;
+  background: #072A2D;
+  color: white;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  left: 0;
 }
 
 .nav-toggle:focus,
 .nav-toggle:hover {
-    opacity: .75;
+  opacity: .75;
 }
 
 .hamburger {
-    width: 50%;
-    position: relative;
+  width: 50%;
+  position: relative;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    background: white;
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
 }
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    width: 100%;
+  content: '';
+  width: 100%;
 }
 
 .hamburger::before {
-    transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .hamburger::after {
-    transform: translateY(3px);
+  transform: translateY(3px);
 }
 
 .nav__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .nav__list--primary {
-    margin: 0 2em;
+  margin-bottom: 2em;
 }
 
-.nav__item + .nav__item{
-    margin-left: 1em;
-}
 
-.nav__list--secondary .nav__item {
+.nav__list--secondary {
   margin-bottom: 0.75em;
 }
+
 .nav__item {
-   margin-top: 0.75em;
+  margin-top: 0.75em;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .nav__link {
   color: #6F737F;
   text-decoration: none;
 }
 
 .nav__link--button {
-  background-color:  #A59678;
+  background-color: #A59678;
   color: #ffffff;
-  padding: 0.25em 1em;
-  border-radius: 20px;
+  padding: 0.4em 0.8em;
+  border-radius: 100px;
   text-transform: uppercase;
 }
+
 .hero {
- background-color: #3B4050;
- padding: 4em;
- 
+  background-color: #3B4050;
+  padding: 100px 0;
+
 }
 
-.hero__title {
+.hero h1 {
   font-size: 90px;
   color: #FFFFFF;
 }
 
-.hero__title--span {
+.hero span {
   color: #A59678;
 }
 
-.hero__text {
-  font-family: 'Monserrat', sans-serif;
+.hero p {
+
   font-size: 24px;
   color: #6F737F;
 }
 
 .btn {
+  display: inline-block;
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
   background-color: #A59678;
@@ -180,38 +185,36 @@ section {
   text-transform: uppercase;
   color: #ffffff;
   border: none;
-  border-radius: 25px;
+  border-radius: 100px;
   letter-spacing: 1.5px;
 }
 
-.section__two {
+.intro {
   background-color: #f1f1f1;
   text-align: center;
 }
 
-.section__two--title {
-  font-family: 'Oswald', sans-serif;
+.intro__title h2 {
   font-size: 30px;
   color: #A59678;
 }
 
-.section__two--text {
-  font-family: 'Monserrat', sans-serif;
+.intro__title p {
   font-size: 18px;
   color: #6F737F;
 }
 
-.section__three {
-    margin: 3em;
-  }
-.section__three--title {
-  font-family: 'Oswald', sans-serif;
+
+.primary__content {
+  width: 62%;
+}
+
+.section__title {
   font-size: 36px;
   color: #A59678;
 }
 
-.section__three--text {
-  font-family: 'Monserrat', sans-serif;
+.primary__content p {
   font-size: 21px;
   line-height: 1.5;
   color: #6F737F;
@@ -222,17 +225,16 @@ section {
   padding: 2em;
   margin-bottom: 1.5em;
   text-align: center;
- 
+
 }
 
-.sidebar__content--title {
-  font-family: 'Oswald', sans-serif;
+.sidebar__content h2 {
+
   font-size: 30px;
   color: #FFFFFF;
 }
 
-.sidebar__content--text {
-  font-family: 'Monserrat', sans-serif;
+.sidebar__content p {
   font-size: 21px;
   color: #6F737F;
 }
@@ -260,52 +262,68 @@ section {
   color: #6F737F;
 }
 
-@media (min-width: 700px){
+@media (min-width: 700px) {
 
-  .row {
+
+  .hero__text {
+    width: 62%;
+  }
+
+  .img {
+    align-self: flex-start;
+    margin: 0;
+  }
+
+  .primary-content {
+    width: 62%;
+  }
+
+  .sidebar {
     display: flex;
-    flex-direction: column;
   }
 
-  .nav.row {
-    display: block;
-  }
-   .nav-toggle {
-        display: none;
-    }
-
-    .nav {
-        visibility: visible;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        height: auto;
-        position: relative;
-    }
-
-    .nav__list {
-        display: flex;
-        margin: 0;
-    }
-
-
-  .nav__item {
-        margin: 0 0 0 1.5em;
-    }
-
-  .sidebar__content {
-    padding: 1.5em 2em;
-    margin-top: 2em;
-    margin-right: 2em;
+  .sidebar__content + .sidebar__content {
+    margin-left: 2em;
   }
 
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1000px) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
 
- .row {
-   display: flex;
-   justify-content: space-between;
- }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+  }
+
+  .nav__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin: 0 0 0 1.5em;
+  }
+
+  .primary-content {
+    width: 62%;
+  }
+
+  .sidebar {
+    display: block;
+    width: 32%;
+  }
 
 }
