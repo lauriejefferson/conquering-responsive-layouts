@@ -17,7 +17,7 @@ header {
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
@@ -38,10 +38,12 @@ p {
   font-family: 'Monserrat', sans-serif;
 }
 
+.main {
+  margin-top: 3em;
+}
 
 section {
   margin: 0 auto;
-  padding: 2em;
 }
 
 
@@ -190,6 +192,7 @@ section {
 }
 
 .intro {
+  padding: 100px 0;
   background-color: #f1f1f1;
   text-align: center;
 }
@@ -205,10 +208,6 @@ section {
 }
 
 
-.primary__content {
-  width: 62%;
-}
-
 .section__title {
   font-size: 36px;
   color: #A59678;
@@ -222,10 +221,9 @@ section {
 
 .sidebar__content {
   background-color: #3B4050;
-  padding: 2em;
+  padding: 3.5em 0.85em;
   margin-bottom: 1.5em;
   text-align: center;
-
 }
 
 .sidebar__content h2 {
@@ -264,7 +262,6 @@ section {
 
 @media (min-width: 700px) {
 
-
   .hero__text {
     width: 62%;
   }
@@ -274,16 +271,12 @@ section {
     margin: 0;
   }
 
-  .primary-content {
-    width: 62%;
-  }
-
   .sidebar {
     display: flex;
   }
 
-  .sidebar__content + .sidebar__content {
-    margin-left: 2em;
+  .sidebar__content+.sidebar__content {
+    margin-left: 2.5em;
   }
 
 }
@@ -317,7 +310,7 @@ section {
     margin: 0 0 0 1.5em;
   }
 
-  .primary-content {
+  .primary__content {
     width: 62%;
   }
 
@@ -326,4 +319,7 @@ section {
     width: 32%;
   }
 
+  .sidebar__content +.sidebar__content {
+    margin-left: 0;
+  }
 }
