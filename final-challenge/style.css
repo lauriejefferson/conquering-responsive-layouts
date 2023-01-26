@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,7 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  /* line-height: 1.6; */
 }
 
 header {
@@ -31,26 +32,15 @@ h1, h2 {
   margin-top: 0;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  line-height: 1;
 }
 
 p {
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.main {
-  margin-top: 3em;
-}
 
 section {
-  margin: 0 auto;
-}
-
-
-.footer {
-  background-color: #3B4050;
-  margin: 0;
-  padding: 2em 2em;
+  padding: 4em 0;
 }
 
 
@@ -160,12 +150,11 @@ section {
 .hero {
   background-color: #3B4050;
   padding: 100px 0;
-
+  color: #FFFFFF;
 }
 
 .hero h1 {
   font-size: 90px;
-  color: #FFFFFF;
 }
 
 .hero span {
@@ -173,7 +162,6 @@ section {
 }
 
 .hero p {
-
   font-size: 24px;
   color: #6F737F;
 }
@@ -208,6 +196,10 @@ section {
 }
 
 
+.main {
+  margin-top: 3em;
+}
+
 .section__title {
   font-size: 36px;
   color: #A59678;
@@ -217,6 +209,10 @@ section {
   font-size: 21px;
   line-height: 1.5;
   color: #6F737F;
+}
+
+.sidebar {
+  padding: 1em;
 }
 
 .sidebar__content {
@@ -237,6 +233,20 @@ section {
   color: #6F737F;
 }
 
+.footer {
+  background-color: #3B4050;
+  margin: 0;
+  padding: 3em 2em;
+}
+
+.footer .col {
+  padding: 0 2.5em;
+}
+
+/* .footer .col+.col {
+  margin-left: 5em;
+} */
+
 .footer__heading {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
@@ -254,10 +264,14 @@ section {
 
 .footer__text,
 .footer__links {
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   letter-spacing: 3px;
   color: #6F737F;
+}
+
+.footer_links {
+  line-height: 2;
 }
 
 @media (min-width: 700px) {
@@ -319,7 +333,7 @@ section {
     width: 32%;
   }
 
-  .sidebar__content +.sidebar__content {
+  .sidebar__content+.sidebar__content {
     margin-left: 0;
   }
 }
